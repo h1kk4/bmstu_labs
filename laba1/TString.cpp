@@ -40,6 +40,7 @@ TString &TString::operator=(const TString &rhs) {
     if (Data == rhs.Data) {
         return *this;
     } else {
+        delete [] Data;
         int len = 0;
         while (rhs.Data[len] != '\0') {
             len++;
@@ -76,6 +77,7 @@ TString &TString::operator+=(const TString &rhs) {
         }
     }
     Data[len + 1] = '\0';
+    delete [] str;
     return *this;
 }
 
@@ -222,6 +224,7 @@ void TString::RTrim(char symbol) {
         Data[j] = str[j];
     }
     Data[len2] = '\0';
+    delete [] str;
 
 }
 
@@ -248,6 +251,8 @@ void TString::LTrim(char symbol) {
         Data[j] = str[j];
     }
     Data[len2] = '\0';
+    delete [] str;
+
 }
 
 std::ostream &operator<<(std::ostream &out, const TString &str) {
