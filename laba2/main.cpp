@@ -2,15 +2,15 @@
 #include "PC.h"
 #include <string>
 int main() {
-    int n(0), freaquence(0);
+    int n(0), frequency(0);
     std::string title;
     std::cout << "Enter the number of PC's" << std::endl;
     std::cin>>n;
     PC *list = new PC[n];
     for (int i=0;i<n;i++){
         std::cin>>title;
-        std::cin>>freaquence;
-        list[i].SetDate(title,freaquence);
+        std::cin>>frequency;
+        list[i].SetDate(title,frequency);
     }
     PC temp;
     for (int i = 0; i < n - 1; i++) {

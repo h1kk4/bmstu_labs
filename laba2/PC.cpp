@@ -7,24 +7,24 @@
 #include <iostream>
 PC::PC() {
     Title="";
-    Freaquence=0;
+    Frequency=0;
 }
 
 void PC::Print() {
     std::cout<< Title<<" ";
-    std::cout<<Freaquence<<'\n';
+    std::cout<<Frequency<<'\n';
 }
 
-void PC::SetDate(std::string &title, int &freaquence) {
+void PC::SetDate(std::string &title, int &frequency) {
     Title=title;
-    Freaquence=freaquence;
+    Frequency=frequency;
 }
 
-PC::PC(std::string &title, int &freaquence) {
-    SetDate(title,freaquence);
+PC::PC(std::string &title, int &frequency) {
+    SetDate(title,frequency);
 }
 
 int PC::GetDate() {
-    return Freaquence;
+    return Frequency;
 }
 

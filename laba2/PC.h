@@ -11,11 +11,11 @@
 class PC {
 private:
     std::string Title;
-    int Freaquence;
+    int Frequency;
 public:
     PC();
-    PC(std::string &title, int &freaquence);
-    void SetDate(std::string &title, int &freaquence);
+    PC(std::string &title, int &frequency);
+    void SetDate(std::string &title, int &frequency);
     int GetDate();
     void Print();
 
