@@ -19,8 +19,6 @@ public:
 
     int GetLen();
 
-    double * GetData();
-
     TVector(const TVector &rhs);
 
     TVector &operator=(const TVector &rhs);
@@ -34,5 +32,6 @@ public:
 };
 
 //double* operator+(const double *const a, const Vector &b);
-double * operator+(double *const a, TVector &b);
+double *operator+(double *const a, TVector &b);
+
 #endif //LABA3_VECTOR_H
