@@ -4,7 +4,10 @@
 using namespace std;
 
 int main() {
-    double vec[9] = {0.8, 0.9, 8.4, 9, 12.4, 1, 2, 3, 4};
+    double *vec;
+    for (int i=0;i<9;i++){
+        vec[i]=0.2+i;
+    }
     TVector vec1(vec, 9);
     TVector vec2;
     vec2 = vec1;
