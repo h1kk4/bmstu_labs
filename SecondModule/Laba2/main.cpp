@@ -27,7 +27,7 @@ int main()
 
         try
         {
-            TBinaryTree::TNode * found = tree.Find(2);
+            TBinaryTree::TNode * found = tree.Find(-10);
             if(found)
                 std::cout <<'\n'<<"Found "<<found->Data;
         }
