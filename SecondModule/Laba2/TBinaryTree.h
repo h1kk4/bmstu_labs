@@ -8,6 +8,7 @@
 #include <exception>
 #include <iostream>
 
+
 struct TExistElementException
         : public std::exception {
     TExistElementException(char const *const message) throw()
