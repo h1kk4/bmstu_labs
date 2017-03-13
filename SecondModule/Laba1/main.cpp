@@ -23,7 +23,7 @@ int intFromString(const char *data) {
 
     }
 
-    if (size > 10) {
+    if (size >12 ) {
         throw OverFlow();
     } else {
         if (data[0] != '-') {
@@ -35,20 +35,30 @@ int intFromString(const char *data) {
                 x = -((int) ((int(data[k - i - 1]) - 48) * pow(10, i))) + x;
             }
         }
-        return x;
+        if((x>0&&data[0]!='-')||(x<0&&data[0]=='-'))
+            return x;
+        else{
+            throw OverFlow();
+        }
+
     }
+
 }
 
 bool boolFromString(const char *data) {
+
+    std::string str(data);
     int i(0);
-    while (data[i] != '\0') {
+
+    while (i!=str.size()) {
+        str[i]=char(tolower(data[i]));
         i++;
-        tolower(data[i]);
+
     }
 
-    if (!strcmp(data, "true") || !strcmp(data, "1")) {
+    if (!str.compare("true") || !str.compare("1")) {
         return true;
-    } else if (!strcmp(data, "false") || !strcmp(data, "0")) {
+    } else if (!str.compare("false") || !str.compare("0")) {
         return false;
     } else throw WrongChar();
 }
@@ -84,31 +94,34 @@ float floatFromString(const char *data) {
             //std::cout<<i<<" "<<x<<'\n';
         }
     }
+
     return x;
 }
 
 int main() {
 
-
     try {
-        intFromString("0012314");
+        intFromString("-2147483649");
     }
     catch (OverFlow &exc) {
-        std::cout << "It's too big string";
+        std::cout << "It's too big string"<<'\n';
     }
     try {
-        floatFromString("0.314");
+        floatFromString("w0.314");
     }
     catch (WrongChar &exc) {
-        std::cout << "It's wrong string";
+        std::cout << "It's wrong string"<<'\n';
     }
     try
     {
-        boolFromString("trueererer");
+        boolFromString("TruEe");
     }
     catch (WrongChar &exc)
     {
-        std::cout<<"Wrong string";
+        std::cout<<"It's not bool"<<'\n';
     }
+
+
+
     return 0;
 }
