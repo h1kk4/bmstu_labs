@@ -100,7 +100,7 @@ int main() {
         floatFromString("0.314");
     }
     catch (WrongChar &exc) {
-        std::cout << "It's too big string";
+        std::cout << "It's wrong string";
     }
     try
     {
