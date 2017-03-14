@@ -115,9 +115,7 @@ public:
     }
      */
     TNode *Find(const value_type &value) {
-        if (Root == nullptr) {
-            throw TNotFoundException("Not found");
-        }
+
         TNode *CurNode = Root;
         while (CurNode != nullptr) {
             if (CurNode->Data == value) {

@@ -11,6 +11,8 @@ int intFromString(const char *data) {
         if (isalpha(data[i])) {
             throw WrongChar();
         }
+        k++;
+        if (data[0]=='-') continue;
         if (flag && (data[i] == '0')) {
 
         } else {
@@ -19,11 +21,11 @@ int intFromString(const char *data) {
         if (!flag) {
             size++;
         }
-        k++;
+
 
     }
 
-    if (size >12 ) {
+    if (size >11 ) {
         throw OverFlow();
     } else {
         if (data[0] != '-') {
@@ -99,22 +101,23 @@ float floatFromString(const char *data) {
 }
 
 int main() {
-
+    //std::cout << std::numeric_limits<int>::min() <<'\n'<< std::numeric_limits<int>::max()<<'\n';
     try {
-        intFromString("-2147483649");
+        intFromString("-002147483648");
     }
+
     catch (OverFlow &exc) {
         std::cout << "It's too big string"<<'\n';
     }
     try {
-        floatFromString("w0.314");
+        floatFromString("012Q343.4");
     }
     catch (WrongChar &exc) {
         std::cout << "It's wrong string"<<'\n';
     }
     try
     {
-        boolFromString("TruEe");
+        boolFromString("False");
     }
     catch (WrongChar &exc)
     {
