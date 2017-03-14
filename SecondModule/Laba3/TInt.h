@@ -132,12 +132,12 @@ public:
     }
 
     bool operator<=(const TInt &rhs) {
-        return (rhs.Value <= Value);
+        return (rhs.Value >= Value);
     }
 
     bool operator<=(const long &rhs) {
         if (Check(rhs)) {
-            return (Value <= rhs);
+            return (Value >= rhs);
         } else throw OverFlow();
     }
 
