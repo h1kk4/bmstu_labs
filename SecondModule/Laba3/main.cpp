@@ -53,7 +53,11 @@ int main() {
         std::cout<<e.what();
     }
     x/=2;
-    std::cout<<x<<'\n';
+    std::cout<<"x="<<x<<" b="<<b<<'\n';
+    if(b<=x){
+        std::cout<<1<<'\n';
+    } else std::cout<<0<<'\n';
+
     TInt d;
     d=-2147483648;
     try {
