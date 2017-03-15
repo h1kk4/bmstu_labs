@@ -1,7 +1,7 @@
 #include <iostream>
 #include "TInt.h"
 int main() {
-    TInt x(9),y(2);
+    TInt x(9),y(8);
     try {
         x*=2147483648;
     }
@@ -55,7 +55,9 @@ int main() {
     {
         std::cout<<e.what();
     }
-    x/=2;
+    x=2;
+    x*=y;
+    b=b*y;
     std::cout<<"x="<<x<<" b="<<b<<'\n';
     if(b<=x){
         std::cout<<1<<'\n';

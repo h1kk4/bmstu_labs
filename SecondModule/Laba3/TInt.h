@@ -13,7 +13,7 @@ public:
     const char *what() const noexcept { return "Ooops! Overflow!\n"; }
 };
 
-bool Check(const long &data) {
+bool Check(const long long &data) {
     return (data >= std::numeric_limits<int>::min() && data <= std::numeric_limits<int>::max());
 
 }
@@ -25,7 +25,7 @@ public:
 
     TInt() {}
 
-    TInt(const long &data) {
+    TInt(const long long &data) {
         if (Check(data)) {
             Value = data;
         } else throw OverFlow();
@@ -38,7 +38,7 @@ public:
         return *this;
     }
 
-    TInt &operator=(const long &rhs) {
+    TInt &operator=(const long long &rhs) {
         if (Check(rhs)) {
             Value = rhs;
             return *this;
@@ -46,7 +46,7 @@ public:
     }
 
     TInt &operator+=(const TInt &rhs) {
-        long tmp = Value + rhs.Value;
+        long long tmp = Value + rhs.Value;
         if (Check(tmp)) {
             Value = tmp;
             return *this;
@@ -54,9 +54,9 @@ public:
 
     }
 
-    TInt &operator+=(const long &rhs) {
+    TInt &operator+=(const long long &rhs) {
 
-        long tmp = Value + rhs;
+        long long tmp = Value + rhs;
         if (Check(tmp)) {
             Value = tmp;
             return *this;
@@ -64,15 +64,15 @@ public:
     }
 
     TInt &operator-=(const TInt &rhs) {
-        long tmp = Value - rhs.Value;
+        long long tmp = Value - rhs.Value;
         if (Check(tmp)) {
             Value = tmp;
             return *this;
         } else throw OverFlow();
     }
 
-    TInt &operator-=(const long &rhs) {
-        long tmp = Value - rhs;
+    TInt &operator-=(const long long &rhs) {
+        long long tmp = Value - rhs;
         if (Check(tmp)) {
             Value = tmp;
             return *this;
@@ -80,7 +80,7 @@ public:
     }
 
     TInt &operator*=(const TInt &rhs) {
-        long tmp = Value * rhs.Value;
+        long long tmp = Value * rhs.Value;
         if (Check(tmp)) {
             Value = tmp;
             return *this;
@@ -88,8 +88,8 @@ public:
 
     }
 
-    TInt &operator*=(const long &rhs) {
-        long tmp = Value * rhs;
+    TInt &operator*=(const long long &rhs) {
+        long long tmp = Value * rhs;
         if (Check(tmp)) {
             Value = tmp;
             return *this;
@@ -102,7 +102,7 @@ public:
         return *this;
     }
 
-    TInt &operator/=(const long &rhs) {
+    TInt &operator/=(const long long &rhs) {
         if (Check(rhs)) {
             Value = Value / rhs;
             return *this;
@@ -114,7 +114,7 @@ public:
         return *this;
     }
 
-    TInt &operator%=(const long &rhs) {
+    TInt &operator%=(const long long &rhs) {
         if (Check(rhs)) {
             Value = Value % rhs;
             return *this;
@@ -125,7 +125,7 @@ public:
         return (rhs.Value == Value);
     }
 
-    bool operator==(const long &rhs) {
+    bool operator==(const long long &rhs) {
         if (Check(rhs)) {
             return (Value == rhs);
         } else throw OverFlow();
@@ -135,7 +135,7 @@ public:
         return (rhs.Value >= Value);
     }
 
-    bool operator<=(const long &rhs) {
+    bool operator<=(const long long &rhs) {
         if (Check(rhs)) {
             return (Value >= rhs);
         } else throw OverFlow();
@@ -145,7 +145,7 @@ public:
         return (rhs.Value <= Value);
     }
 
-    bool operator>=(const long &rhs) {
+    bool operator>=(const long long &rhs) {
         if (Check(rhs)) {
             return (Value >= rhs);
         } else throw OverFlow();
@@ -164,12 +164,12 @@ TInt operator+(const TInt &a, const TInt &b) {
     return c += b;
 }
 
-TInt operator+(const TInt &a, const long &data) {
+TInt operator+(const TInt &a, const long long &data) {
     TInt c(a);
     return c += data;
 }
 
-TInt operator+(const long &data, const TInt &a) {
+TInt operator+(const long long &data, const TInt &a) {
     TInt c(a);
     return c += data;
 }
@@ -179,12 +179,12 @@ TInt operator-(const TInt &a, const TInt &b) {
     return c -= b;
 }
 
-TInt operator-(const TInt &a, const long &data) {
+TInt operator-(const TInt &a, const long long &data) {
     TInt c(a);
     return c -= data;
 }
 
-TInt operator-(const long &data, const TInt &a) {
+TInt operator-(const long long &data, const TInt &a) {
     TInt c(a);
     return c -= data;
 }
@@ -194,12 +194,12 @@ TInt operator/(const TInt &a, const TInt &b) {
     return c /= b;
 }
 
-TInt operator/(const TInt &a, const long &data) {
+TInt operator/(const TInt &a, const long long &data) {
     TInt c(a);
     return c /= data;
 }
 
-TInt operator/(const long &data, const TInt &a) {
+TInt operator/(const long long &data, const TInt &a) {
     TInt c(a);
     return c /= data;
 }
@@ -209,12 +209,12 @@ TInt operator*(const TInt &a, const TInt &b) {
     return c *= b;
 }
 
-TInt operator*(const TInt &a, const long &data) {
+TInt operator*(const TInt &a, const long long &data) {
     TInt c(a);
     return c *= data;
 }
 
-TInt operator*(const long &data, const TInt &a) {
+TInt operator*(const long long &data, const TInt &a) {
     TInt c(a);
     return c *= data;
 }
@@ -224,12 +224,12 @@ TInt operator%(const TInt &a, const TInt &b) {
     return c %= b;
 }
 
-TInt operator%(const TInt &a, const long &data) {
+TInt operator%(const TInt &a, const long long &data) {
     TInt c(a);
     return c %= data;
 }
 
-TInt operator%(const long &data, const TInt &a) {
+TInt operator%(const long long &data, const TInt &a) {
     TInt c(a);
     return c %= data;
 }
