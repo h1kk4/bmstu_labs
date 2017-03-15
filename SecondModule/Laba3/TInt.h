@@ -164,12 +164,12 @@ TInt operator+(const TInt &a, const TInt &b) {
     return c += b;
 }
 
-TInt operator+(const TInt &a, const long data) {
+TInt operator+(const TInt &a, const long &data) {
     TInt c(a);
     return c += data;
 }
 
-TInt operator+(const long data, const TInt &a) {
+TInt operator+(const long &data, const TInt &a) {
     TInt c(a);
     return c += data;
 }
@@ -179,12 +179,12 @@ TInt operator-(const TInt &a, const TInt &b) {
     return c -= b;
 }
 
-TInt operator-(const TInt &a, const long data) {
+TInt operator-(const TInt &a, const long &data) {
     TInt c(a);
     return c -= data;
 }
 
-TInt operator-(const long data, const TInt &a) {
+TInt operator-(const long &data, const TInt &a) {
     TInt c(a);
     return c -= data;
 }
@@ -194,12 +194,12 @@ TInt operator/(const TInt &a, const TInt &b) {
     return c /= b;
 }
 
-TInt operator/(const TInt &a, const long data) {
+TInt operator/(const TInt &a, const long &data) {
     TInt c(a);
     return c /= data;
 }
 
-TInt operator/(const long data, const TInt &a) {
+TInt operator/(const long &data, const TInt &a) {
     TInt c(a);
     return c /= data;
 }
@@ -209,12 +209,12 @@ TInt operator*(const TInt &a, const TInt &b) {
     return c *= b;
 }
 
-TInt operator*(const TInt &a, const long data) {
+TInt operator*(const TInt &a, const long &data) {
     TInt c(a);
     return c *= data;
 }
 
-TInt operator*(const long data, const TInt &a) {
+TInt operator*(const long &data, const TInt &a) {
     TInt c(a);
     return c *= data;
 }
@@ -224,12 +224,12 @@ TInt operator%(const TInt &a, const TInt &b) {
     return c %= b;
 }
 
-TInt operator%(const TInt &a, const long data) {
+TInt operator%(const TInt &a, const long &data) {
     TInt c(a);
     return c %= data;
 }
 
-TInt operator%(const long data, const TInt &a) {
+TInt operator%(const long &data, const TInt &a) {
     TInt c(a);
     return c %= data;
 }

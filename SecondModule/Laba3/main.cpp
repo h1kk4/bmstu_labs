@@ -17,6 +17,8 @@ int main() {
         std::cout<<e.what();
 
     }
+    x=y;
+    std::cout<<"X=Y="<<x<<'\n';
     try {
         x=2147483645+2;
     }
@@ -28,6 +30,7 @@ int main() {
     std::cout<<x<<'\n';
     TInt b;
     b=2147483647;
+    b=b/5;
     std::cout<<"b="<<b<<'\n';
     try {
         if(b>=21474836499){
