@@ -47,12 +47,7 @@ public:
             return *this;
         }
     }
-    TInt &operator=(const int &rhs) {
-        if (Check(rhs)) {
-            Value = rhs;
-            return *this;
-        }
-    }
+
 
     TInt &operator+=(const TInt &rhs) {
         long long tmp = (long long )Value + rhs.Value;
@@ -71,14 +66,7 @@ public:
             return *this;
         }
     }
-    TInt &operator+=(const int &rhs) {
 
-        long long tmp = Value + rhs;
-        if (Check(tmp)) {
-            Value = tmp;
-            return *this;
-        }
-    }
     TInt &operator-=(const TInt &rhs) {
         long long tmp = (long long )Value - rhs.Value;
         if (Check(tmp)) {
@@ -94,13 +82,7 @@ public:
             return *this;
         }
     }
-    TInt &operator-=(const int &rhs) {
-        long long tmp = Value - rhs;
-        if (Check(tmp)) {
-            Value = tmp;
-            return *this;
-        }
-    }
+
     TInt &operator*=(const TInt &rhs) {
         long long tmp = (long long )Value * rhs.Value;
         if (Check(tmp)) {
@@ -110,14 +92,8 @@ public:
 
     }
 
-    TInt &operator*=(const int &rhs) {
-        long long tmp = (long long )Value * rhs;
-        if (Check(tmp)) {
-            Value = tmp;
-            return *this;
-        }
 
-    }
+
 
     TInt &operator*=(const long long &rhs) {
         long long tmp = Value * rhs;
@@ -132,10 +108,6 @@ public:
         Value /= rhs.Value;
         return *this;
     }
-    TInt &operator/=(const int &rhs) {
-        Value /= rhs;
-        return *this;
-    }
 
     TInt &operator/=(const long long &rhs) {
         if (Check(rhs)) {
@@ -148,10 +120,8 @@ public:
         Value %= rhs.Value;
         return *this;
     }
-    TInt &operator%=(const int &rhs) {
-        Value %= rhs;
-        return *this;
-    }
+
+
     TInt &operator%=(const long long &rhs) {
         if (Check(rhs)) {
             Value = Value % rhs;

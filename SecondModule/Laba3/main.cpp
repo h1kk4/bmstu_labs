@@ -1,9 +1,10 @@
 #include <iostream>
 #include "TInt.h"
 int main() {
-    TInt x(9),y(2147483647);
+    TInt x(2147483647),y(2147483647);
+    int heh=8;
     try {
-        x*=2147483648;
+        x+=heh;
     }
     catch (OverFlow &e)
     {
@@ -62,7 +63,8 @@ int main() {
     } else std::cout<<0<<'\n';
 
     TInt d(0),j(1) ;
-
+    int i(5);
+    j+=i;
     d=-2147483648;
     try {
         d-= j;
