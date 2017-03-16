@@ -81,6 +81,11 @@ float floatFromString(const char *data) {
 
     }
     if(count>1) throw WrongChar();
+    if (dot==0){
+        for (int i = 0; i < k; i++) {
+            x = (int) ((int(data[k - i - 1]) - 48) * pow(10, i)) + x;
+        }
+    }
     if (data[0] != '-') {
         for (int i = 0; i < dot; i++) {
             x = (float) ((int(data[dot - i - 1]) - 48) * pow(10, i)) + x;
@@ -109,7 +114,7 @@ int main() {
     std::cout<<1<<'='<<intFromString("-00214748364")<<'\n';
     std::cout<<2<<'='<<intFromString("-002147483648")<<'\n';
     std::cout<<3<<'='<<intFromString("002147483647")<<'\n';
-    std::cout<<4<<'='<<intFromString("0021474.83647"); // Должно получится 21474
+    std::cout<<4<<'='<<intFromString("0021474.83647")<<'\n'; // Должно получится 21474
     try {
         intFromString("-002147483649");
     }
