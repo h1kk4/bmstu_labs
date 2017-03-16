@@ -11,6 +11,7 @@ int intFromString(const char *data) {
         if (isalpha(data[i])) {
             throw WrongChar();
         }
+        if(data[i]=='.'||data[i]==',') break;
         k++;
         if (data[0]=='-') continue;
         if (flag && (data[i] == '0')) {
@@ -66,17 +67,20 @@ bool boolFromString(const char *data) {
 }
 
 float floatFromString(const char *data) {
-    int k(0), dot(0);
+    int k(0), dot(0), count(0);
     float x(0);
     for (int i = 0; data[i] != '\0'; i++) {
         k++;
         if (isalpha(data[i])) {
             throw WrongChar();
         }
-        if (data[i] == '.' || data[i] == ',') dot = i;
+        if (data[i] == '.' || data[i] == ',') {
+            dot = i;
+            count++;
+        }
 
     }
-
+    if(count>1) throw WrongChar();
     if (data[0] != '-') {
         for (int i = 0; i < dot; i++) {
             x = (float) ((int(data[dot - i - 1]) - 48) * pow(10, i)) + x;
@@ -102,26 +106,52 @@ float floatFromString(const char *data) {
 
 int main() {
     //std::cout << std::numeric_limits<int>::min() <<'\n'<< std::numeric_limits<int>::max()<<'\n';
+    std::cout<<1<<'='<<intFromString("-00214748364")<<'\n';
+    std::cout<<2<<'='<<intFromString("-002147483648")<<'\n';
+    std::cout<<3<<'='<<intFromString("002147483647")<<'\n';
+    std::cout<<4<<'='<<intFromString("0021474.83647"); // Должно получится 21474
     try {
-        intFromString("-002147483648");
+        intFromString("-002147483649");
     }
-
     catch (OverFlow &exc) {
-        std::cout << "It's too big string"<<'\n';
+        exc.what();
     }
     try {
-        floatFromString("012Q343.4");
+        intFromString("-0021f48364");
     }
     catch (WrongChar &exc) {
-        std::cout << "It's wrong string"<<'\n';
+        exc.what();
     }
+
+    std::cout<<floatFromString("00003333")<<'\n';
+    std::cout<<floatFromString("000001.2343")<<'\n';
+    try {
+        std::cout<<"--->"<<floatFromString("000001.2343.4")<<'\n';
+    }
+    catch (WrongChar &exc) {
+        exc.what();
+    }
+    try {
+        std::cout<<floatFromString("000001.2343d4")<<'\n';
+    }
+    catch (WrongChar &exc) {
+        exc.what();
+    }
+    try {
+        std::cout<<floatFromString("00d0001.23434")<<'\n';
+    }
+    catch (WrongChar &exc) {
+        exc.what();
+    }
+
+    boolFromString("FalSe");
     try
     {
-        boolFromString("False");
+        boolFromString("FalSse");
     }
     catch (WrongChar &exc)
     {
-        std::cout<<"It's not bool"<<'\n';
+        exc.what();
     }
 
 
