@@ -3,7 +3,9 @@
 #include "CastException.h"
 
 template<typename T>
-T fromString(const char *data);
+T fromString(const char *data){
+    throw NoFoo();
+}
 
 template<>
 

@@ -26,4 +26,11 @@ public:
     }
 
 };
+class NoFoo : public CastException
+{
+public:
+	void what() {
+        std::cout << "Missing function" << '\n';
+    }
+};
 #endif //MODULE2LABA1_CASTEXCEPTION_H
