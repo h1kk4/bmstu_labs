@@ -18,7 +18,7 @@ public:
             : Ptr(p) {}
 
     ~TScopedPtr() {
-        delete[] Ptr;
+        delete Ptr;
     }
 
     void reset(T *p = nullptr) {
