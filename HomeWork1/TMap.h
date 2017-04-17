@@ -62,11 +62,7 @@ public:
             return *this;
         }
 
-        Iterator &operator++(int) {
-            if (!Ptr)
-                return *this;
-
-        }
+        Iterator &operator++(int) {}
 
 
         value_type *operator->() {
