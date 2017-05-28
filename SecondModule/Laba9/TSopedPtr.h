@@ -22,7 +22,7 @@ public:
     }
 
     void reset(T *p = nullptr) {
-        if (Ptr) delete[] Ptr;
+        if (Ptr) delete Ptr;
         Ptr = p;
     }
 

@@ -50,8 +50,16 @@ public:
 
     void reserve(size_type size) {
         if (size < InternalCapacity) return;
-        value_type *tmp = new value_type[size];
-        memcpy(tmp, Ptr, Count * sizeof(value_type));
+        iterator tmp = new value_type[size];
+        std::copy(this->begin(), this->end(), tmp);
+        //memcpy(tmp, Ptr, Count * sizeof(value_type));
+        /*
+        size_t i=0;
+        for (iterator It = this->begin(); It != this->end(); ++It) {
+            tmp[i] = *It;
+            ++i;
+        }
+        */
         delete[] Ptr;
         Ptr = tmp;
         InternalCapacity = size;

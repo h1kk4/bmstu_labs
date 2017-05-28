@@ -67,7 +67,7 @@ public:
     }
 
     ~RAII() {
-        if (Ptr)
+        if (Ptr != nullptr)
             Ptr->Close();
     }
 };

@@ -12,19 +12,16 @@ struct TArray {
     using size_type = size_t;
     using reference = value_type &;
     using const_reference = const value_type &;
-    using pointer = T *;
     using const_pointer = const T *;
+    value_type Ptr[N];
     using iterator = value_type *;
-    using const_iterator = const value_type *;
-    value_type *Ptr;
 
-    TArray() {
-        Ptr = new T[N];
-    }
 
-    ~TArray() {
-        delete[] Ptr;
-    }
+    TArray() {}
+
+
+    ~TArray() {}
+
 
     TArray(std::initializer_list<T> init) : TArray() {
         size_type i = 0;
@@ -61,7 +58,7 @@ struct TArray {
     iterator end() const throw() {
         return Ptr + N;
     }
-    
+
     reference front() {
         if (Ptr) {
             return Ptr[0];
@@ -90,34 +87,27 @@ struct TArray {
         return Ptr;
     }
 
-    const_iterator data() const throw() {
-        return Ptr;
+
+    bool empty() const throw() {
+        return (N == 0);
     }
 
-    bool empty() const throw()
-    {
-        return (N==0);
-    }
-
-    size_type size() const throw()
-    {
+    size_type size() const throw() {
         return N;
     }
 
-    size_type max_size() const throw()
-    {
+    size_type max_size() const throw() {
         return N;
     }
 
     void fill(const value_type &val) {
-        for (size_type j=0; j < N; ++j)
+        for (size_type j = 0; j < N; ++j)
             Ptr[j] = val;
     }
 
     void swap(TArray<T, N> &other) throw() {
         std::swap(Ptr, other.Ptr);
     }
-
 
 
 };
