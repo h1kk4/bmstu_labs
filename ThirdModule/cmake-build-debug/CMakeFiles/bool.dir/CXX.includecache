@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/alex/ClionProjects/bool/TBoolean.h
+string
+-
+vector
+-
+math.h
+-
+map
+-
+
+/Users/alex/ClionProjects/bool/main.cpp
+iostream
+-
+exception
+-
+TBoolean.h
+/Users/alex/ClionProjects/bool/TBoolean.h
+
