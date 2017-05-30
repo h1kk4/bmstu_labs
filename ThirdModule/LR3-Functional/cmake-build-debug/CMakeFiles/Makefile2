@@ -54,45 +54,45 @@ RM = "/Applications/CLion 2.app/Contents/bin/cmake/bin/cmake" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/alex/ClionProjects/bool
+CMAKE_SOURCE_DIR = /Users/alex/ClionProjects/Deadline
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/alex/ClionProjects/bool/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/alex/ClionProjects/Deadline/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/bool.dir
+# Target rules for target CMakeFiles/Deadline.dir
 
 # All Build rule for target.
-CMakeFiles/bool.dir/all:
-	$(MAKE) -f CMakeFiles/bool.dir/build.make CMakeFiles/bool.dir/depend
-	$(MAKE) -f CMakeFiles/bool.dir/build.make CMakeFiles/bool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alex/ClionProjects/bool/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target bool"
-.PHONY : CMakeFiles/bool.dir/all
+CMakeFiles/Deadline.dir/all:
+	$(MAKE) -f CMakeFiles/Deadline.dir/build.make CMakeFiles/Deadline.dir/depend
+	$(MAKE) -f CMakeFiles/Deadline.dir/build.make CMakeFiles/Deadline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alex/ClionProjects/Deadline/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Deadline"
+.PHONY : CMakeFiles/Deadline.dir/all
 
 # Include target in all.
-all: CMakeFiles/bool.dir/all
+all: CMakeFiles/Deadline.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/bool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/ClionProjects/bool/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bool.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/ClionProjects/bool/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/bool.dir/rule
+CMakeFiles/Deadline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/ClionProjects/Deadline/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Deadline.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/ClionProjects/Deadline/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Deadline.dir/rule
 
 # Convenience name for target.
-bool: CMakeFiles/bool.dir/rule
+Deadline: CMakeFiles/Deadline.dir/rule
 
-.PHONY : bool
-
-# clean rule for target.
-CMakeFiles/bool.dir/clean:
-	$(MAKE) -f CMakeFiles/bool.dir/build.make CMakeFiles/bool.dir/clean
-.PHONY : CMakeFiles/bool.dir/clean
+.PHONY : Deadline
 
 # clean rule for target.
-clean: CMakeFiles/bool.dir/clean
+CMakeFiles/Deadline.dir/clean:
+	$(MAKE) -f CMakeFiles/Deadline.dir/build.make CMakeFiles/Deadline.dir/clean
+.PHONY : CMakeFiles/Deadline.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Deadline.dir/clean
 
 .PHONY : clean
 

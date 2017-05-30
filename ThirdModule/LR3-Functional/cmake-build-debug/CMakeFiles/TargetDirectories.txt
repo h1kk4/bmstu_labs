@@ -1,0 +1,3 @@
+/Users/alex/ClionProjects/Deadline/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alex/ClionProjects/Deadline/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alex/ClionProjects/Deadline/cmake-build-debug/CMakeFiles/Deadline.dir

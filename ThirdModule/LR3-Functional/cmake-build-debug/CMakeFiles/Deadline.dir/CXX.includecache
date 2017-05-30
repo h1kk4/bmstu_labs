@@ -6,21 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/alex/ClionProjects/bool/TBoolean.h
+/Users/alex/ClionProjects/Deadline/main.cpp
+iostream
+-
 string
 -
 vector
 -
-math.h
--
 map
 -
-
-/Users/alex/ClionProjects/bool/main.cpp
-iostream
+algorithm
 -
-exception
+numeric
 -
-TBoolean.h
-/Users/alex/ClionProjects/bool/TBoolean.h
+cmath
+-
 
