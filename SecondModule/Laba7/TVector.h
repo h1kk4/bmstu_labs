@@ -50,16 +50,9 @@ public:
 
     void reserve(size_type size) {
         if (size < InternalCapacity) return;
-        iterator tmp = new value_type[size];
-        std::copy(this->begin(), this->end(), tmp);
+        value_type *tmp = new value_type[size];
         //memcpy(tmp, Ptr, Count * sizeof(value_type));
-        /*
-        size_t i=0;
-        for (iterator It = this->begin(); It != this->end(); ++It) {
-            tmp[i] = *It;
-            ++i;
-        }
-        */
+        std::copy(this->begin(), this->end(), tmp);
         delete[] Ptr;
         Ptr = tmp;
         InternalCapacity = size;
@@ -68,7 +61,10 @@ public:
     TVector(const TVector &rhs) {
         this->reserve(rhs.InternalCapacity);
         Count = rhs.Count;
-        memcpy(Ptr, rhs.Ptr, Count * sizeof(value_type));
+        //memcpy(Ptr, rhs.Ptr, Count * sizeof(value_type));
+        iterator tmp = new value_type[rhs.InternalCapacity];
+        std::copy(rhs.Ptr, rhs.Ptr + rhs.InternalCapacity, tmp);
+
     }
 
     TVector &operator=(const TVector &rhs) {
@@ -76,7 +72,9 @@ public:
             return *this;
         this->reserve(rhs.InternalCapacity);
         Count = rhs.Count;
-        memcpy(Ptr, rhs.Ptr, Count * sizeof(value_type));
+        //memcpy(Ptr, rhs.Ptr, Count * sizeof(value_type));
+        iterator tmp = new value_type[InternalCapacity];
+        std::copy(rhs.Ptr, rhs.Ptr + rhs.InternalCapacity, tmp);
     }
 
     void push_back(const value_type &value) {
