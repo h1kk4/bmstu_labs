@@ -390,11 +390,18 @@ public:
     }
 
     bool is_monotone() const {
-        if (Data.size() == 0)
-            throw std::exception();
-        for (size_t i = 0; i < Data.size() - 1; ++i)
-            if (Data[i] > Data[i + 1])
-                return false;
+        size_type tmp = Data.size()/2;
+        while (tmp != 0) {
+            size_t i = 0;
+            while (i + tmp <= Data.size()) {
+                size_t j = tmp;
+                for (i; j--; ++i) {
+                    if (Data[i] > Data[tmp + i]) return false;
+                }
+                i += tmp;
+            }
+            tmp /= 2;
+        }
         return true;
     }
 
