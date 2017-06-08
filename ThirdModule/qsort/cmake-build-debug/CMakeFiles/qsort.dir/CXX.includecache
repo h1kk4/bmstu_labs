@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/alex/ClionProjects/qsort/THeader.h
+iostream
+-
+
+/Users/alex/ClionProjects/qsort/main.cpp
+iostream
+-
+vector
+-
+THeader.h
+/Users/alex/ClionProjects/qsort/THeader.h
+
