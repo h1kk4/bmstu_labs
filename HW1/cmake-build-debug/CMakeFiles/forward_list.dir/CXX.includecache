@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/alex/ClionProjects/forward_list/TList.h
+iostream
+-
+
+/Users/alex/ClionProjects/forward_list/main.cpp
+forward_list
+-
+iostream
+-
+TList.h
+/Users/alex/ClionProjects/forward_list/TList.h
+

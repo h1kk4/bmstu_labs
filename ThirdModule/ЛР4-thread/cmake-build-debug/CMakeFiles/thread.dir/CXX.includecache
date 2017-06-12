@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/alex/ClionProjects/thread/InfInt.cpp
+InfInt.h
+/Users/alex/ClionProjects/thread/InfInt.h
+
+/Users/alex/ClionProjects/thread/InfInt.h
+iostream
+-
+vector
+-
+sstream
+-
+iomanip
+-
+limits.h
+-
+stdlib.h
+-
+exception
+-
+
+/Users/alex/ClionProjects/thread/main.cpp
+iostream
+-
+InfInt.h
+/Users/alex/ClionProjects/thread/InfInt.h
+thread
+-
+future
+-
+
