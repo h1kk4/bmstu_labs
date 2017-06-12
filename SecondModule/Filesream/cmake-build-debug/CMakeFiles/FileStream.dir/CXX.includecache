@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/alex/ClionProjects/FileStream/TFileStream.h
+string
+-
+iostream
+-
+sstream
+-
+stdio.h
+-
+
+/Users/alex/ClionProjects/FileStream/main.cpp
+iostream
+-
+string
+-
+TFileStream.h
+/Users/alex/ClionProjects/FileStream/TFileStream.h
+

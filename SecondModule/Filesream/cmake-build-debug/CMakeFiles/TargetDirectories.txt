@@ -1,0 +1,3 @@
+/Users/alex/ClionProjects/FileStream/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alex/ClionProjects/FileStream/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alex/ClionProjects/FileStream/cmake-build-debug/CMakeFiles/FileStream.dir
