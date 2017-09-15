@@ -38,8 +38,8 @@ $ mkdir -p workspace/labs/reports/	#создаем директроию workspac
 ## Report 
 Добавляем `Report` на `GitHub`
 ```bash
-$ cd ~/workspace/labs/ 					#переход в директорию workspace/labs/ 
-$ export LAB_NUMBER=02					#в виртуальное окружение добавляем переменную LAB_NUMBER
+$ cd ~/workspace/labs/	#переход в директорию workspace/labs/ 
+$ export LAB_NUMBER=02	#в виртуальное окружение добавляем переменную LAB_NUMBER
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} #клонируем репозиторий в папку
 $ mkdir reports/lab${LAB_NUMBER} #созданаем директорию reports/lab
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md #копируем содержимое README в REPORT
