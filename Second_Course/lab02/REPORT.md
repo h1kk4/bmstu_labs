@@ -9,17 +9,17 @@
 - [X] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
  
 ## Tutorial
-
+Устанавливаем значение переменных окружения `GITHUB_USERNAME` и `GIST_TOKEN`
 ```bash
-$ export GITHUB_USERNAME=h1kk4
-$ export GIST_TOKEN=xxxxxxxxxxxxxxxxxxxxx
+$ export GITHUB_USERNAME=h1kk4		#Устанавливаем значение переменную окружения `GITHUB_USERNAME`
+$ export GIST_TOKEN=xxxxxxxxxxxxxxxxxxxxx #Устанавливаем значение переменную окружения `GIST_TOKEN`
 $ alias edit=nano
 ```
-
+Устанавливаем `gistup`
 ```bash
 $ npm install -g gistup #установливаем gistup
 ``
-
+Добавляем токен в файл gist'a
 ```bash
 $ cat > ~/.gistup.json <<EOF
 {
@@ -27,19 +27,19 @@ $ cat > ~/.gistup.json <<EOF
 }
 EOF #заполняем файл .gistup.json
 ```
-
+Создаем рабочее пространство 
 ```bash
-$ cd ~ #переход в домашнюю директорию 
-$ mkdir -p workspace/labs/projects/ #создаем директроии
-$ mkdir -p workspace/labs/tasks/
-$ mkdir -p workspace/labs/reports/
+$ cd ~									#переход в домашнюю директорию 
+$ mkdir -p workspace/labs/projects/ 	#создаем директроию workspace/labs/projects/
+$ mkdir -p workspace/labs/tasks/		#создаем директроию workspace/labs//tasks/
+$ mkdir -p workspace/labs/reports/		#создаем директроию workspace/labs/reports/	
 ```
 
-## Report
-
+## Report 
+Добавляем `Report` на `GitHub`
 ```bash
-$ cd ~/workspace/labs/ #переход в директорию workspace/labs/ 
-$ export LAB_NUMBER=02
+$ cd ~/workspace/labs/ 					#переход в директорию workspace/labs/ 
+$ export LAB_NUMBER=02					#в виртуальное окружение добавляем переменную LAB_NUMBER
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} #клонируем репозиторий в папку
 $ mkdir reports/lab${LAB_NUMBER} #созданаем директорию reports/lab
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md #копируем содержимое README в REPORT
