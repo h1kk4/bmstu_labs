@@ -11,14 +11,14 @@
 ## Tutorial
 Устанавливаем значение переменных окружения `GITHUB_USERNAME` и `GIST_TOKEN`
 ```bash
-$ export GITHUB_USERNAME=h1kk4		#Устанавливаем значение переменную окружения `GITHUB_USERNAME`
+$ export GITHUB_USERNAME=h1kk4	#Устанавливаем значение переменную окружения `GITHUB_USERNAME`
 $ export GIST_TOKEN=xxxxxxxxxxxxxxxxxxxxx #Устанавливаем значение переменную окружения `GIST_TOKEN`
-$ alias edit=nano
+$ alias edit=nano #Переопределяем команду edit
 ```
 Устанавливаем `gistup`
 ```bash
 $ npm install -g gistup #установливаем gistup
-``
+```
 Добавляем токен в файл gist'a
 ```bash
 $ cat > ~/.gistup.json <<EOF
@@ -29,10 +29,10 @@ EOF #заполняем файл .gistup.json
 ```
 Создаем рабочее пространство 
 ```bash
-$ cd ~									#переход в домашнюю директорию 
-$ mkdir -p workspace/labs/projects/ 	#создаем директроию workspace/labs/projects/
-$ mkdir -p workspace/labs/tasks/		#создаем директроию workspace/labs//tasks/
-$ mkdir -p workspace/labs/reports/		#создаем директроию workspace/labs/reports/	
+$ cd ~	#переход в домашнюю директорию 
+$ mkdir -p workspace/labs/projects/	#создаем директроию workspace/labs/projects/
+$ mkdir -p workspace/labs/tasks/	#создаем директроию workspace/labs//tasks/
+$ mkdir -p workspace/labs/reports/	#создаем директроию workspace/labs/reports/	
 ```
 
 ## Report 
