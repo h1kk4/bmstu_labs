@@ -1,0 +1,16 @@
+"/Applications/CLion 2.app/Contents/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/alex/ClionProjects/lab14
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /Users/alex/.hunter
+-- [hunter] [ Hunter-ID: 8667dee | Toolchain-ID: a5fd140 | Config-ID: 94c4b72 ]
+-- [hunter] BOOST_ROOT: /Users/alex/.hunter/_Base/8667dee/a5fd140/94c4b72/Install (ver.: 1.65.1)
+-- [hunter] BOOST_ROOT: /Users/alex/.hunter/_Base/8667dee/a5fd140/94c4b72/Install (ver.: 1.65.1)
+-- [hunter] BOOST_ROOT: /Users/alex/.hunter/_Base/8667dee/a5fd140/94c4b72/Install (ver.: 1.65.1)
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   program_options
+--   system
+--   filesystem
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/alex/ClionProjects/lab14/cmake-build-debug
